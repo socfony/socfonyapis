@@ -1,0 +1,20 @@
+// 设置数据源
+datasource database {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 设置 JavaScript 生成器
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 设置 Nexus Prisma 生成器
+generator NexusPrisma {
+    provider = "nexus-prisma"
+}
+
+/// 用户
+model User {
+  id String @id @database.Char(64) /// 用户 ID
+}
