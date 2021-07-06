@@ -11,10 +11,11 @@ generator client {
 
 // 设置 Nexus Prisma 生成器
 generator NexusPrisma {
-    provider = "nexus-prisma"
+  provider = "nexus-prisma"
 }
 
 /// 用户
 model User {
-  id String @id @database.Char(64) /// 用户 ID
+  id       String @id @database.Char(64) /// 用户 ID
+  username String @unique @database.VarChar(128) /// 用户名
 }
