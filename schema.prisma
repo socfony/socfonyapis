@@ -1,6 +1,6 @@
 // 设置数据源
 datasource database {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -41,7 +41,7 @@ model UserProfile {
 /// 用户安全信息
 model UserSecurity {
   userId        String   @id @database.Char(64) /// 用户 ID
-  password      String?  @database.VarChar /// 密码
+  password      String?  @database.Char(128) /// 密码
   phone         String?  @unique @database.VarChar(50) /// 手机号码
   phoneVerified Boolean? @default(false) /// 手机是否验证
   totpSceret    String?  @database.VarChar(128) /// TOTP 密钥
