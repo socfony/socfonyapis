@@ -20,9 +20,9 @@ model User {
   username  String   @unique @database.VarChar(128) /// 用户唯一名称
   createdAt DateTime @default(now()) /// 创建时间
 
-  profile             UserProfile? /// 用户资料
-  security            UserSecurity? /// 用户安全设置
-  PersonalAccessToken PersonalAccessToken[]
+  profile      UserProfile? /// 用户资料
+  security     UserSecurity? /// 用户安全设置
+  accessTokens AccessToken[] /// User access tokens
 }
 
 /// 用户资料
@@ -49,22 +49,16 @@ model UserSecurity {
   user User @relation(fields: [userId], references: [id]) /// 用户
 }
 
-/// 个人访问令牌
-model PersonalAccessToken {
-  id     String  @id @database.VarChar(64) /// 个人访问令牌 ID
-  token  String  @unique @database.VarChar(128) /// 令牌
-  note   String? @database.VarChar(255) /// 备注
-  userId String  @database.Char(64) /// 用户 ID
+/// Access tokens
+model AccessToken {
+  id               String   @id @database.Char(64) /// Access token ID
+  token            String   @unique @database.VarChar(128) /// Access token
+  createdAt        DateTime @default(now()) /// Created at
+  expiredAt        DateTime /// Expired at
+  refreshExpiredAt DateTime /// Refresh expired at
+  userId           String   @database.Char(64) /// User ID
 
-  user User @relation(fields: [userId], references: [id]) /// 用户
-}
-
-/// OAuth Scopes
-model OAuthScope {
-  personalTokenId String @database.VarChar(64) /// 个人令牌 ID
-  key             String @database.VarChar(128) /// Scope Key
-
-  @@id([personalTokenId, key])
+  user User @relation(fields: [userId], references: [id]) /// User
 }
 
 /// 社会性别枚举
