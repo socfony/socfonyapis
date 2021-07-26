@@ -16,6 +16,59 @@ generator NexusPrisma {
 
 /// 用户
 model User {
-  id       String @id @database.Char(64) /// 用户 ID
-  username String @unique @database.VarChar(128) /// 用户名
+  id        String   @id @database.Char(64) /// 用户 ID
+  username  String   @unique @database.VarChar(128) /// 用户唯一名称
+  createdAt DateTime @default(now()) /// 创建时间
+
+  profile             UserProfile? /// 用户资料
+  security            UserSecurity? /// 用户安全设置
+  PersonalAccessToken PersonalAccessToken[]
+}
+
+/// 用户资料
+model UserProfile {
+  userId    String    @id @database.Char(64) /// 用户 ID
+  name      String?   @unique @database.VarChar(128) /// 唯一昵称
+  bio       String?   @database.VarChar(512) /// 简介
+  gender    Gender? /// 社会性别
+  updatedAt DateTime? @default(now()) /// 更新时间
+
+  user User @relation(fields: [userId], references: [id]) /// 用户
+
+  @@index([gender])
+}
+
+/// 用户安全信息
+model UserSecurity {
+  userId        String   @id @database.Char(64) /// 用户 ID
+  password      String?  @database.VarChar /// 密码
+  phone         String?  @unique @database.VarChar(50) /// 手机号码
+  phoneVerified Boolean? @default(false) /// 手机是否验证
+  totpSceret    String?  @database.VarChar(128) /// TOTP 密钥
+
+  user User @relation(fields: [userId], references: [id]) /// 用户
+}
+
+/// 个人访问令牌
+model PersonalAccessToken {
+  id     String  @id @database.VarChar(64) /// 个人访问令牌 ID
+  token  String  @unique @database.VarChar(128) /// 令牌
+  note   String? @database.VarChar(255) /// 备注
+  userId String  @database.Char(64) /// 用户 ID
+
+  user User @relation(fields: [userId], references: [id]) /// 用户
+}
+
+/// OAuth Scopes
+model OAuthScope {
+  personalTokenId String @database.VarChar(64) /// 个人令牌 ID
+  key             String @database.VarChar(128) /// Scope Key
+
+  @@id([personalTokenId, key])
+}
+
+/// 社会性别枚举
+enum Gender {
+  MALE /// 男性 
+  FEMALE /// 女性
 }
