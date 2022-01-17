@@ -5,7 +5,7 @@
 
 root_dir=$(dirname $0); # root directory of the project
 protos_dir=$root_dir/protos; # directory of the protos
-output_dir=$root_dir/lib/src/protobuf; # directory to output the generated files
+output_dir=$root_dir/lib/src; # directory to output the generated files
 cache_dir=$root_dir/.socfony_cache; # directory to cache the downloaded files
 
 # Define proto imports
