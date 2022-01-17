@@ -1,5 +1,3 @@
-protobuf/
+protos/
 build_protobuf.sh
 install_protoc.sh
-
-!lib/src/google/protobuf/*
