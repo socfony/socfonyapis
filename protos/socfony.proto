@@ -179,14 +179,12 @@ service UserProfileService {
 
 // 更新用户资料请求
 message UpdateUserProfileRequest {
-  // 昵称
-  optional string name = 1;
   // 简介
-  optional string bio = 2;
+  optional string bio = 1;
   // 性别
-  optional UserProfile.Gender gender = 3;
+  optional UserProfile.Gender gender = 2;
   // 生日
-  optional int32 birthday = 4;
+  optional int32 birthday = 3;
 }
 
 // 用户资料
@@ -203,16 +201,14 @@ message UserProfile {
 
   // 用户 ID
   string user_id = 1;
-  // 昵称
-  optional string name = 2;
   // 头像
-  optional Media.Image avatar = 3;
+  optional Media.Image avatar = 2;
   // 个人简介
-  optional string bio = 4;
+  optional string bio = 3;
   // 性别
-  Gender gender = 5;
+  Gender gender = 4;
   // 生日
-  optional int32 birthday = 6;
+  optional int32 birthday = 5;
 }
 
 //------------------------------------------------------------------------------
@@ -250,6 +246,21 @@ message Moment {
   message Media {
     message Images {
       repeated string images = 1;
+
+      // 比例
+      Ratio ratio = 2;
+
+      // 比例选择
+      enum Ratio {
+        // 宽高比 1:1
+        RATIO_1_1 = 0;
+        // 宽高比 3:2
+        RATIO_3_2 = 1;
+        // 宽高比 4:3
+        RATIO_4_3 = 2;
+        // 宽高比 16:9
+        RATIO_16_9 = 3;
+      }
     }
 
     oneof kind {

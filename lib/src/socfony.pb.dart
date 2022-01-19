@@ -1386,14 +1386,9 @@ class UpdateUserProfileRequest extends $pb.GeneratedMessage {
         1,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
             : 'bio')
     ..e<UserProfile_Gender>(
-        3,
+        2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gender',
@@ -1402,7 +1397,7 @@ class UpdateUserProfileRequest extends $pb.GeneratedMessage {
         valueOf: UserProfile_Gender.valueOf,
         enumValues: UserProfile_Gender.values)
     ..a<$core.int>(
-        4,
+        3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'birthday',
@@ -1411,15 +1406,11 @@ class UpdateUserProfileRequest extends $pb.GeneratedMessage {
 
   UpdateUserProfileRequest._() : super();
   factory UpdateUserProfileRequest({
-    $core.String? name,
     $core.String? bio,
     UserProfile_Gender? gender,
     $core.int? birthday,
   }) {
     final _result = create();
-    if (name != null) {
-      _result.name = name;
-    }
     if (bio != null) {
       _result.bio = bio;
     }
@@ -1461,52 +1452,40 @@ class UpdateUserProfileRequest extends $pb.GeneratedMessage {
   static UpdateUserProfileRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
+  $core.String get bio => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) {
+  set bio($core.String v) {
     $_setString(0, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
+  $core.bool hasBio() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearBio() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get bio => $_getSZ(1);
+  UserProfile_Gender get gender => $_getN(1);
   @$pb.TagNumber(2)
-  set bio($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasBio() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearBio() => clearField(2);
-
-  @$pb.TagNumber(3)
-  UserProfile_Gender get gender => $_getN(2);
-  @$pb.TagNumber(3)
   set gender(UserProfile_Gender v) {
-    setField(3, v);
+    setField(2, v);
   }
 
-  @$pb.TagNumber(3)
-  $core.bool hasGender() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearGender() => clearField(3);
+  @$pb.TagNumber(2)
+  $core.bool hasGender() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearGender() => clearField(2);
 
-  @$pb.TagNumber(4)
-  $core.int get birthday => $_getIZ(3);
-  @$pb.TagNumber(4)
+  @$pb.TagNumber(3)
+  $core.int get birthday => $_getIZ(2);
+  @$pb.TagNumber(3)
   set birthday($core.int v) {
-    $_setSignedInt32(3, v);
+    $_setSignedInt32(2, v);
   }
 
-  @$pb.TagNumber(4)
-  $core.bool hasBirthday() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearBirthday() => clearField(4);
+  @$pb.TagNumber(3)
+  $core.bool hasBirthday() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBirthday() => clearField(3);
 }
 
 class UserProfile extends $pb.GeneratedMessage {
@@ -1524,24 +1503,19 @@ class UserProfile extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'userId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
     ..aOM<Media_Image>(
-        3,
+        2,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'avatar',
         subBuilder: Media_Image.create)
     ..aOS(
-        4,
+        3,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'bio')
     ..e<UserProfile_Gender>(
-        5,
+        4,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'gender',
@@ -1550,7 +1524,7 @@ class UserProfile extends $pb.GeneratedMessage {
         valueOf: UserProfile_Gender.valueOf,
         enumValues: UserProfile_Gender.values)
     ..a<$core.int>(
-        6,
+        5,
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'birthday',
@@ -1560,7 +1534,6 @@ class UserProfile extends $pb.GeneratedMessage {
   UserProfile._() : super();
   factory UserProfile({
     $core.String? userId,
-    $core.String? name,
     Media_Image? avatar,
     $core.String? bio,
     UserProfile_Gender? gender,
@@ -1569,9 +1542,6 @@ class UserProfile extends $pb.GeneratedMessage {
     final _result = create();
     if (userId != null) {
       _result.userId = userId;
-    }
-    if (name != null) {
-      _result.name = name;
     }
     if (avatar != null) {
       _result.avatar = avatar;
@@ -1626,66 +1596,54 @@ class UserProfile extends $pb.GeneratedMessage {
   void clearUserId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  Media_Image get avatar => $_getN(1);
   @$pb.TagNumber(2)
-  set name($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearName() => clearField(2);
-
-  @$pb.TagNumber(3)
-  Media_Image get avatar => $_getN(2);
-  @$pb.TagNumber(3)
   set avatar(Media_Image v) {
-    setField(3, v);
+    setField(2, v);
   }
 
-  @$pb.TagNumber(3)
-  $core.bool hasAvatar() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearAvatar() => clearField(3);
-  @$pb.TagNumber(3)
-  Media_Image ensureAvatar() => $_ensure(2);
+  @$pb.TagNumber(2)
+  $core.bool hasAvatar() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAvatar() => clearField(2);
+  @$pb.TagNumber(2)
+  Media_Image ensureAvatar() => $_ensure(1);
 
-  @$pb.TagNumber(4)
-  $core.String get bio => $_getSZ(3);
-  @$pb.TagNumber(4)
+  @$pb.TagNumber(3)
+  $core.String get bio => $_getSZ(2);
+  @$pb.TagNumber(3)
   set bio($core.String v) {
-    $_setString(3, v);
+    $_setString(2, v);
   }
 
-  @$pb.TagNumber(4)
-  $core.bool hasBio() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearBio() => clearField(4);
+  @$pb.TagNumber(3)
+  $core.bool hasBio() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBio() => clearField(3);
 
-  @$pb.TagNumber(5)
-  UserProfile_Gender get gender => $_getN(4);
-  @$pb.TagNumber(5)
+  @$pb.TagNumber(4)
+  UserProfile_Gender get gender => $_getN(3);
+  @$pb.TagNumber(4)
   set gender(UserProfile_Gender v) {
-    setField(5, v);
+    setField(4, v);
   }
 
-  @$pb.TagNumber(5)
-  $core.bool hasGender() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearGender() => clearField(5);
+  @$pb.TagNumber(4)
+  $core.bool hasGender() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearGender() => clearField(4);
 
-  @$pb.TagNumber(6)
-  $core.int get birthday => $_getIZ(5);
-  @$pb.TagNumber(6)
+  @$pb.TagNumber(5)
+  $core.int get birthday => $_getIZ(4);
+  @$pb.TagNumber(5)
   set birthday($core.int v) {
-    $_setSignedInt32(5, v);
+    $_setSignedInt32(4, v);
   }
 
-  @$pb.TagNumber(6)
-  $core.bool hasBirthday() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearBirthday() => clearField(6);
+  @$pb.TagNumber(5)
+  $core.bool hasBirthday() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearBirthday() => clearField(5);
 }
 
 class CreateMomentRequest extends $pb.GeneratedMessage {
@@ -1906,15 +1864,28 @@ class Moment_Media_Images extends $pb.GeneratedMessage {
         const $core.bool.fromEnvironment('protobuf.omit_field_names')
             ? ''
             : 'images')
+    ..e<Moment_Media_Images_Ratio>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ratio',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: Moment_Media_Images_Ratio.RATIO_1_1,
+        valueOf: Moment_Media_Images_Ratio.valueOf,
+        enumValues: Moment_Media_Images_Ratio.values)
     ..hasRequiredFields = false;
 
   Moment_Media_Images._() : super();
   factory Moment_Media_Images({
     $core.Iterable<$core.String>? images,
+    Moment_Media_Images_Ratio? ratio,
   }) {
     final _result = create();
     if (images != null) {
       _result.images.addAll(images);
+    }
+    if (ratio != null) {
+      _result.ratio = ratio;
     }
     return _result;
   }
@@ -1947,6 +1918,18 @@ class Moment_Media_Images extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get images => $_getList(0);
+
+  @$pb.TagNumber(2)
+  Moment_Media_Images_Ratio get ratio => $_getN(1);
+  @$pb.TagNumber(2)
+  set ratio(Moment_Media_Images_Ratio v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasRatio() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRatio() => clearField(2);
 }
 
 enum Moment_Media_Kind { image, video, audio, notSet }
