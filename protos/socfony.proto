@@ -254,10 +254,8 @@ message Moment {
       enum Ratio {
         // 宽高比 1:1
         RATIO_1_1 = 0;
-        // 宽高比 3:2
-        RATIO_3_2 = 1;
-        // 宽高比 4:3
-        RATIO_4_3 = 2;
+        // 宽高比 3:4
+        RATIO_3_4 = 1;
         // 宽高比 16:9
         RATIO_16_9 = 3;
       }

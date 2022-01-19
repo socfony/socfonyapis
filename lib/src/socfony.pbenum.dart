@@ -46,18 +46,12 @@ class Moment_Media_Images_Ratio extends $pb.ProtobufEnum {
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
               : 'RATIO_1_1');
-  static const Moment_Media_Images_Ratio RATIO_3_2 =
+  static const Moment_Media_Images_Ratio RATIO_3_4 =
       Moment_Media_Images_Ratio._(
           1,
           const $core.bool.fromEnvironment('protobuf.omit_enum_names')
               ? ''
-              : 'RATIO_3_2');
-  static const Moment_Media_Images_Ratio RATIO_4_3 =
-      Moment_Media_Images_Ratio._(
-          2,
-          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'RATIO_4_3');
+              : 'RATIO_3_4');
   static const Moment_Media_Images_Ratio RATIO_16_9 =
       Moment_Media_Images_Ratio._(
           3,
@@ -68,8 +62,7 @@ class Moment_Media_Images_Ratio extends $pb.ProtobufEnum {
   static const $core.List<Moment_Media_Images_Ratio> values =
       <Moment_Media_Images_Ratio>[
     RATIO_1_1,
-    RATIO_3_2,
-    RATIO_4_3,
+    RATIO_3_4,
     RATIO_16_9,
   ];
 
