@@ -114,6 +114,10 @@ service UserService {
   rpc UpdateAccountName(google.protobuf.StringValue) returns(google.protobuf.Empty);
   // 更新或者绑定用户手机号码
   rpc UpdatePhone(UpdateUserPhoneRequest) returns(google.protobuf.Empty);
+  // 关注一个用户
+  rpc Follow(google.protobuf.StringValue) returns(google.protobuf.BoolValue);
+  // 取消关注一个用户
+  rpc Unfollow(google.protobuf.StringValue) returns(google.protobuf.BoolValue);
 }
 
 // 查询唯一用户请求

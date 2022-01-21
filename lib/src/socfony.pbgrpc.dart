@@ -193,6 +193,14 @@ class UserServiceClient extends $grpc.Client {
           '/odroe.socfony.UserService/UpdatePhone',
           ($0.UpdateUserPhoneRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$follow = $grpc.ClientMethod<$2.StringValue, $2.BoolValue>(
+      '/odroe.socfony.UserService/Follow',
+      ($2.StringValue value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
+  static final _$unfollow = $grpc.ClientMethod<$2.StringValue, $2.BoolValue>(
+      '/odroe.socfony.UserService/Unfollow',
+      ($2.StringValue value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
 
   UserServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -222,6 +230,16 @@ class UserServiceClient extends $grpc.Client {
   $grpc.ResponseFuture<$1.Empty> updatePhone($0.UpdateUserPhoneRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updatePhone, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.BoolValue> follow($2.StringValue request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$follow, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.BoolValue> unfollow($2.StringValue request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$unfollow, request, options: options);
   }
 }
 
@@ -267,6 +285,20 @@ abstract class UserServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdateUserPhoneRequest.fromBuffer(value),
         ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.StringValue, $2.BoolValue>(
+        'Follow',
+        follow_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.StringValue.fromBuffer(value),
+        ($2.BoolValue value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.StringValue, $2.BoolValue>(
+        'Unfollow',
+        unfollow_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.StringValue.fromBuffer(value),
+        ($2.BoolValue value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.User> findUnique_Pre($grpc.ServiceCall call,
@@ -294,6 +326,16 @@ abstract class UserServiceBase extends $grpc.Service {
     return updatePhone(call, await request);
   }
 
+  $async.Future<$2.BoolValue> follow_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.StringValue> request) async {
+    return follow(call, await request);
+  }
+
+  $async.Future<$2.BoolValue> unfollow_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.StringValue> request) async {
+    return unfollow(call, await request);
+  }
+
   $async.Future<$0.User> findUnique(
       $grpc.ServiceCall call, $0.FindUniqueUserRequest request);
   $async.Future<$0.UserList> findMany(
@@ -304,6 +346,10 @@ abstract class UserServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.StringValue request);
   $async.Future<$1.Empty> updatePhone(
       $grpc.ServiceCall call, $0.UpdateUserPhoneRequest request);
+  $async.Future<$2.BoolValue> follow(
+      $grpc.ServiceCall call, $2.StringValue request);
+  $async.Future<$2.BoolValue> unfollow(
+      $grpc.ServiceCall call, $2.StringValue request);
 }
 
 class UserProfileServiceClient extends $grpc.Client {
