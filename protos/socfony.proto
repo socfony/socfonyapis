@@ -228,9 +228,9 @@ service MomentService {
   // 评论一条动态
   rpc Comment(CommentMomentRequest) returns(odroe.socfony.Comment);
   // 喜欢一条动态
-  rpc Like(google.protobuf.Empty) returns(google.protobuf.BoolValue);
+  rpc Like(google.protobuf.StringValue) returns(google.protobuf.BoolValue);
   // 取消喜欢一条动态
-  rpc Unlike(google.protobuf.Empty) returns(google.protobuf.BoolValue);
+  rpc Unlike(google.protobuf.StringValue) returns(google.protobuf.BoolValue);
 }
 
 // 创建动态请求

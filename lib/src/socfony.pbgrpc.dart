@@ -435,13 +435,13 @@ class MomentServiceClient extends $grpc.Client {
           '/odroe.socfony.MomentService/Comment',
           ($0.CommentMomentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Comment.fromBuffer(value));
-  static final _$like = $grpc.ClientMethod<$1.Empty, $2.BoolValue>(
+  static final _$like = $grpc.ClientMethod<$2.StringValue, $2.BoolValue>(
       '/odroe.socfony.MomentService/Like',
-      ($1.Empty value) => value.writeToBuffer(),
+      ($2.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
-  static final _$unlike = $grpc.ClientMethod<$1.Empty, $2.BoolValue>(
+  static final _$unlike = $grpc.ClientMethod<$2.StringValue, $2.BoolValue>(
       '/odroe.socfony.MomentService/Unlike',
-      ($1.Empty value) => value.writeToBuffer(),
+      ($2.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
 
   MomentServiceClient($grpc.ClientChannel channel,
@@ -469,12 +469,12 @@ class MomentServiceClient extends $grpc.Client {
     return $createUnaryCall(_$comment, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.BoolValue> like($1.Empty request,
+  $grpc.ResponseFuture<$2.BoolValue> like($2.StringValue request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$like, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.BoolValue> unlike($1.Empty request,
+  $grpc.ResponseFuture<$2.BoolValue> unlike($2.StringValue request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$unlike, request, options: options);
   }
@@ -515,19 +515,19 @@ abstract class MomentServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CommentMomentRequest.fromBuffer(value),
         ($0.Comment value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.Empty, $2.BoolValue>(
+    $addMethod($grpc.ServiceMethod<$2.StringValue, $2.BoolValue>(
         'Like',
         like_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.Empty.fromBuffer(value),
+        ($core.List<$core.int> value) => $2.StringValue.fromBuffer(value),
         ($2.BoolValue value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.Empty, $2.BoolValue>(
+    $addMethod($grpc.ServiceMethod<$2.StringValue, $2.BoolValue>(
         'Unlike',
         unlike_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.Empty.fromBuffer(value),
+        ($core.List<$core.int> value) => $2.StringValue.fromBuffer(value),
         ($2.BoolValue value) => value.writeToBuffer()));
   }
 
@@ -552,12 +552,12 @@ abstract class MomentServiceBase extends $grpc.Service {
   }
 
   $async.Future<$2.BoolValue> like_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.Empty> request) async {
+      $grpc.ServiceCall call, $async.Future<$2.StringValue> request) async {
     return like(call, await request);
   }
 
   $async.Future<$2.BoolValue> unlike_Pre(
-      $grpc.ServiceCall call, $async.Future<$1.Empty> request) async {
+      $grpc.ServiceCall call, $async.Future<$2.StringValue> request) async {
     return unlike(call, await request);
   }
 
@@ -569,8 +569,10 @@ abstract class MomentServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.FindAllMomentRequest request);
   $async.Future<$0.Comment> comment(
       $grpc.ServiceCall call, $0.CommentMomentRequest request);
-  $async.Future<$2.BoolValue> like($grpc.ServiceCall call, $1.Empty request);
-  $async.Future<$2.BoolValue> unlike($grpc.ServiceCall call, $1.Empty request);
+  $async.Future<$2.BoolValue> like(
+      $grpc.ServiceCall call, $2.StringValue request);
+  $async.Future<$2.BoolValue> unlike(
+      $grpc.ServiceCall call, $2.StringValue request);
 }
 
 class CommentServiceClient extends $grpc.Client {
