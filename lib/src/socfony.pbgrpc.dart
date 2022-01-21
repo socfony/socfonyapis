@@ -18,15 +18,15 @@ export 'socfony.pb.dart';
 class AccessTokenServiceClient extends $grpc.Client {
   static final _$create =
       $grpc.ClientMethod<$0.CreateAccessTokenRequest, $0.AccessToken>(
-          '/com.socfony.AccessTokenService/Create',
+          '/odroe.socfony.AccessTokenService/Create',
           ($0.CreateAccessTokenRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.AccessToken.fromBuffer(value));
   static final _$refresh = $grpc.ClientMethod<$1.Empty, $0.AccessToken>(
-      '/com.socfony.AccessTokenService/Refresh',
+      '/odroe.socfony.AccessTokenService/Refresh',
       ($1.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.AccessToken.fromBuffer(value));
   static final _$delete = $grpc.ClientMethod<$1.Empty, $1.Empty>(
-      '/com.socfony.AccessTokenService/Delete',
+      '/odroe.socfony.AccessTokenService/Delete',
       ($1.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
@@ -53,7 +53,7 @@ class AccessTokenServiceClient extends $grpc.Client {
 }
 
 abstract class AccessTokenServiceBase extends $grpc.Service {
-  $core.String get $name => 'com.socfony.AccessTokenService';
+  $core.String get $name => 'odroe.socfony.AccessTokenService';
 
   AccessTokenServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.CreateAccessTokenRequest, $0.AccessToken>(
@@ -105,12 +105,12 @@ abstract class AccessTokenServiceBase extends $grpc.Service {
 class TencentCloudServiceClient extends $grpc.Client {
   static final _$createCosFederationCredentials =
       $grpc.ClientMethod<$1.Empty, $0.TencentCloudCredentials>(
-          '/com.socfony.TencentCloudService/CreateCosFederationCredentials',
+          '/odroe.socfony.TencentCloudService/CreateCosFederationCredentials',
           ($1.Empty value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.TencentCloudCredentials.fromBuffer(value));
   static final _$sendSmsOTP = $grpc.ClientMethod<$2.StringValue, $1.Empty>(
-      '/com.socfony.TencentCloudService/SendSmsOTP',
+      '/odroe.socfony.TencentCloudService/SendSmsOTP',
       ($2.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
@@ -133,7 +133,7 @@ class TencentCloudServiceClient extends $grpc.Client {
 }
 
 abstract class TencentCloudServiceBase extends $grpc.Service {
-  $core.String get $name => 'com.socfony.TencentCloudService';
+  $core.String get $name => 'odroe.socfony.TencentCloudService';
 
   TencentCloudServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.Empty, $0.TencentCloudCredentials>(
@@ -171,26 +171,26 @@ abstract class TencentCloudServiceBase extends $grpc.Service {
 class UserServiceClient extends $grpc.Client {
   static final _$findUnique =
       $grpc.ClientMethod<$0.FindUniqueUserRequest, $0.User>(
-          '/com.socfony.UserService/FindUnique',
+          '/odroe.socfony.UserService/FindUnique',
           ($0.FindUniqueUserRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.User.fromBuffer(value));
   static final _$findMany =
       $grpc.ClientMethod<$0.FindManyUserRequest, $0.UserList>(
-          '/com.socfony.UserService/FindMany',
+          '/odroe.socfony.UserService/FindMany',
           ($0.FindManyUserRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.UserList.fromBuffer(value));
   static final _$search = $grpc.ClientMethod<$0.SearchUserRequest, $0.UserList>(
-      '/com.socfony.UserService/Search',
+      '/odroe.socfony.UserService/Search',
       ($0.SearchUserRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.UserList.fromBuffer(value));
   static final _$updateAccountName =
       $grpc.ClientMethod<$2.StringValue, $1.Empty>(
-          '/com.socfony.UserService/UpdateAccountName',
+          '/odroe.socfony.UserService/UpdateAccountName',
           ($2.StringValue value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$updatePhone =
       $grpc.ClientMethod<$0.UpdateUserPhoneRequest, $1.Empty>(
-          '/com.socfony.UserService/UpdatePhone',
+          '/odroe.socfony.UserService/UpdatePhone',
           ($0.UpdateUserPhoneRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
@@ -226,7 +226,7 @@ class UserServiceClient extends $grpc.Client {
 }
 
 abstract class UserServiceBase extends $grpc.Service {
-  $core.String get $name => 'com.socfony.UserService';
+  $core.String get $name => 'odroe.socfony.UserService';
 
   UserServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.FindUniqueUserRequest, $0.User>(
@@ -308,12 +308,12 @@ abstract class UserServiceBase extends $grpc.Service {
 
 class UserProfileServiceClient extends $grpc.Client {
   static final _$find = $grpc.ClientMethod<$2.StringValue, $0.UserProfile>(
-      '/com.socfony.UserProfileService/Find',
+      '/odroe.socfony.UserProfileService/Find',
       ($2.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.UserProfile.fromBuffer(value));
   static final _$update =
       $grpc.ClientMethod<$0.UpdateUserProfileRequest, $1.Empty>(
-          '/com.socfony.UserProfileService/Update',
+          '/odroe.socfony.UserProfileService/Update',
           ($0.UpdateUserProfileRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
@@ -334,7 +334,7 @@ class UserProfileServiceClient extends $grpc.Client {
 }
 
 abstract class UserProfileServiceBase extends $grpc.Service {
-  $core.String get $name => 'com.socfony.UserProfileService';
+  $core.String get $name => 'odroe.socfony.UserProfileService';
 
   UserProfileServiceBase() {
     $addMethod($grpc.ServiceMethod<$2.StringValue, $0.UserProfile>(
@@ -372,18 +372,31 @@ abstract class UserProfileServiceBase extends $grpc.Service {
 
 class MomentServiceClient extends $grpc.Client {
   static final _$create = $grpc.ClientMethod<$0.CreateMomentRequest, $0.Moment>(
-      '/com.socfony.MomentService/Create',
+      '/odroe.socfony.MomentService/Create',
       ($0.CreateMomentRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Moment.fromBuffer(value));
   static final _$delete = $grpc.ClientMethod<$2.StringValue, $1.Empty>(
-      '/com.socfony.MomentService/Delete',
+      '/odroe.socfony.MomentService/Delete',
       ($2.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$findAll =
       $grpc.ClientMethod<$0.FindAllMomentRequest, $0.MomentList>(
-          '/com.socfony.MomentService/FindAll',
+          '/odroe.socfony.MomentService/FindAll',
           ($0.FindAllMomentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.MomentList.fromBuffer(value));
+  static final _$comment =
+      $grpc.ClientMethod<$0.CommentMomentRequest, $0.Comment>(
+          '/odroe.socfony.MomentService/Comment',
+          ($0.CommentMomentRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Comment.fromBuffer(value));
+  static final _$like = $grpc.ClientMethod<$1.Empty, $2.BoolValue>(
+      '/odroe.socfony.MomentService/Like',
+      ($1.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
+  static final _$unlike = $grpc.ClientMethod<$1.Empty, $2.BoolValue>(
+      '/odroe.socfony.MomentService/Unlike',
+      ($1.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
 
   MomentServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -404,10 +417,25 @@ class MomentServiceClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$findAll, request, options: options);
   }
+
+  $grpc.ResponseFuture<$0.Comment> comment($0.CommentMomentRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$comment, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.BoolValue> like($1.Empty request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$like, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.BoolValue> unlike($1.Empty request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$unlike, request, options: options);
+  }
 }
 
 abstract class MomentServiceBase extends $grpc.Service {
-  $core.String get $name => 'com.socfony.MomentService';
+  $core.String get $name => 'odroe.socfony.MomentService';
 
   MomentServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.CreateMomentRequest, $0.Moment>(
@@ -433,6 +461,28 @@ abstract class MomentServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.FindAllMomentRequest.fromBuffer(value),
         ($0.MomentList value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CommentMomentRequest, $0.Comment>(
+        'Comment',
+        comment_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.CommentMomentRequest.fromBuffer(value),
+        ($0.Comment value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.Empty, $2.BoolValue>(
+        'Like',
+        like_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.Empty.fromBuffer(value),
+        ($2.BoolValue value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.Empty, $2.BoolValue>(
+        'Unlike',
+        unlike_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.Empty.fromBuffer(value),
+        ($2.BoolValue value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Moment> create_Pre($grpc.ServiceCall call,
@@ -450,10 +500,68 @@ abstract class MomentServiceBase extends $grpc.Service {
     return findAll(call, await request);
   }
 
+  $async.Future<$0.Comment> comment_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CommentMomentRequest> request) async {
+    return comment(call, await request);
+  }
+
+  $async.Future<$2.BoolValue> like_Pre(
+      $grpc.ServiceCall call, $async.Future<$1.Empty> request) async {
+    return like(call, await request);
+  }
+
+  $async.Future<$2.BoolValue> unlike_Pre(
+      $grpc.ServiceCall call, $async.Future<$1.Empty> request) async {
+    return unlike(call, await request);
+  }
+
   $async.Future<$0.Moment> create(
       $grpc.ServiceCall call, $0.CreateMomentRequest request);
   $async.Future<$1.Empty> delete(
       $grpc.ServiceCall call, $2.StringValue request);
   $async.Future<$0.MomentList> findAll(
       $grpc.ServiceCall call, $0.FindAllMomentRequest request);
+  $async.Future<$0.Comment> comment(
+      $grpc.ServiceCall call, $0.CommentMomentRequest request);
+  $async.Future<$2.BoolValue> like($grpc.ServiceCall call, $1.Empty request);
+  $async.Future<$2.BoolValue> unlike($grpc.ServiceCall call, $1.Empty request);
+}
+
+class CommentServiceClient extends $grpc.Client {
+  static final _$delete = $grpc.ClientMethod<$2.StringValue, $1.Empty>(
+      '/odroe.socfony.CommentService/Delete',
+      ($2.StringValue value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+
+  CommentServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
+
+  $grpc.ResponseFuture<$1.Empty> delete($2.StringValue request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$delete, request, options: options);
+  }
+}
+
+abstract class CommentServiceBase extends $grpc.Service {
+  $core.String get $name => 'odroe.socfony.CommentService';
+
+  CommentServiceBase() {
+    $addMethod($grpc.ServiceMethod<$2.StringValue, $1.Empty>(
+        'Delete',
+        delete_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.StringValue.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+  }
+
+  $async.Future<$1.Empty> delete_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.StringValue> request) async {
+    return delete(call, await request);
+  }
+
+  $async.Future<$1.Empty> delete(
+      $grpc.ServiceCall call, $2.StringValue request);
 }

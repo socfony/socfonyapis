@@ -23,7 +23,7 @@ class Media_Image extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -89,7 +89,7 @@ class Media_Video extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -179,7 +179,7 @@ class Media_Audio extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -277,7 +277,7 @@ class Media extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
     ..aOM<Media_Image>(
@@ -398,7 +398,7 @@ class CreateAccessTokenRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -488,7 +488,7 @@ class AccessToken extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -647,7 +647,7 @@ class TencentCloudCredentials extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -791,7 +791,7 @@ class FindUniqueUserRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
     ..aOS(
@@ -907,7 +907,7 @@ class FindManyUserRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..pc<FindUniqueUserRequest>(
         1,
@@ -967,7 +967,7 @@ class SearchUserRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -1078,7 +1078,7 @@ class UpdateUserPhoneRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -1189,7 +1189,7 @@ class User extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -1321,7 +1321,7 @@ class UserList extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..pc<User>(
         1,
@@ -1380,7 +1380,7 @@ class UpdateUserProfileRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -1496,7 +1496,7 @@ class UserProfile extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -1654,7 +1654,7 @@ class CreateMomentRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -1766,7 +1766,7 @@ class FindAllMomentRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..a<$core.int>(
         1,
@@ -1857,7 +1857,7 @@ class Moment_Media_Images extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..pPS(
         1,
@@ -1949,7 +1949,7 @@ class Moment_Media extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
     ..aOM<Moment_Media_Images>(
@@ -2071,7 +2071,7 @@ class Moment extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..aOS(
         1,
@@ -2248,7 +2248,7 @@ class MomentList extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
-              : 'com.socfony'),
+              : 'odroe.socfony'),
       createEmptyInstance: create)
     ..pc<Moment>(
         1,
@@ -2297,4 +2297,225 @@ class MomentList extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<Moment> get moments => $_getList(0);
+}
+
+class CommentMomentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CommentMomentRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'odroe.socfony'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'momentId')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'content')
+    ..hasRequiredFields = false;
+
+  CommentMomentRequest._() : super();
+  factory CommentMomentRequest({
+    $core.String? momentId,
+    $core.String? content,
+  }) {
+    final _result = create();
+    if (momentId != null) {
+      _result.momentId = momentId;
+    }
+    if (content != null) {
+      _result.content = content;
+    }
+    return _result;
+  }
+  factory CommentMomentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommentMomentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CommentMomentRequest clone() =>
+      CommentMomentRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CommentMomentRequest copyWith(void Function(CommentMomentRequest) updates) =>
+      super.copyWith((message) => updates(message as CommentMomentRequest))
+          as CommentMomentRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CommentMomentRequest create() => CommentMomentRequest._();
+  CommentMomentRequest createEmptyInstance() => create();
+  static $pb.PbList<CommentMomentRequest> createRepeated() =>
+      $pb.PbList<CommentMomentRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CommentMomentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommentMomentRequest>(create);
+  static CommentMomentRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get momentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set momentId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMomentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMomentId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get content => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set content($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasContent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearContent() => clearField(2);
+}
+
+class Comment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Comment',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'odroe.socfony'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'id')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'userId')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'content')
+    ..aOM<$3.Timestamp>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createdAt',
+        subBuilder: $3.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  Comment._() : super();
+  factory Comment({
+    $core.String? id,
+    $core.String? userId,
+    $core.String? content,
+    $3.Timestamp? createdAt,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (userId != null) {
+      _result.userId = userId;
+    }
+    if (content != null) {
+      _result.content = content;
+    }
+    if (createdAt != null) {
+      _result.createdAt = createdAt;
+    }
+    return _result;
+  }
+  factory Comment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Comment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Comment clone() => Comment()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Comment copyWith(void Function(Comment) updates) =>
+      super.copyWith((message) => updates(message as Comment))
+          as Comment; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Comment create() => Comment._();
+  Comment createEmptyInstance() => create();
+  static $pb.PbList<Comment> createRepeated() => $pb.PbList<Comment>();
+  @$core.pragma('dart2js:noInline')
+  static Comment getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Comment>(create);
+  static Comment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get userId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set userId($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasUserId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get content => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set content($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasContent() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContent() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $3.Timestamp get createdAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set createdAt($3.Timestamp v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasCreatedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCreatedAt() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.Timestamp ensureCreatedAt() => $_ensure(3);
 }
