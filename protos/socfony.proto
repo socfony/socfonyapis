@@ -231,6 +231,8 @@ service MomentService {
   rpc Like(google.protobuf.StringValue) returns(google.protobuf.BoolValue);
   // 取消喜欢一条动态
   rpc Unlike(google.protobuf.StringValue) returns(google.protobuf.BoolValue);
+  // 获取一条动态的评论列表
+  rpc FindComments(FindMomentCommentsRequest) returns(CommentList);
 }
 
 // 创建动态请求
@@ -302,6 +304,16 @@ message CommentMomentRequest {
   string content = 2;
 }
 
+// 查询动态评论列表请求
+message FindMomentCommentsRequest {
+  // 动态 ID
+  string moment_id = 1;
+  // 分页大小
+  optional int32 limit = 2;
+  // 偏移量
+  optional int32 offset = 3;
+}
+
 //------------------------------------------------------------------------------
 // Comment - 评论
 //------------------------------------------------------------------------------
@@ -316,4 +328,9 @@ message Comment {
   string user_id = 2;
   string content = 3;
   google.protobuf.Timestamp created_at = 4;
+}
+
+// 评论列表
+message CommentList {
+  repeated Comment comments = 1;
 }

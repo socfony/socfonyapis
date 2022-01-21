@@ -443,6 +443,11 @@ class MomentServiceClient extends $grpc.Client {
       '/odroe.socfony.MomentService/Unlike',
       ($2.StringValue value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.BoolValue.fromBuffer(value));
+  static final _$findComments =
+      $grpc.ClientMethod<$0.FindMomentCommentsRequest, $0.CommentList>(
+          '/odroe.socfony.MomentService/FindComments',
+          ($0.FindMomentCommentsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.CommentList.fromBuffer(value));
 
   MomentServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -477,6 +482,12 @@ class MomentServiceClient extends $grpc.Client {
   $grpc.ResponseFuture<$2.BoolValue> unlike($2.StringValue request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$unlike, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CommentList> findComments(
+      $0.FindMomentCommentsRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$findComments, request, options: options);
   }
 }
 
@@ -529,6 +540,15 @@ abstract class MomentServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.StringValue.fromBuffer(value),
         ($2.BoolValue value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.FindMomentCommentsRequest, $0.CommentList>(
+            'FindComments',
+            findComments_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.FindMomentCommentsRequest.fromBuffer(value),
+            ($0.CommentList value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Moment> create_Pre($grpc.ServiceCall call,
@@ -561,6 +581,11 @@ abstract class MomentServiceBase extends $grpc.Service {
     return unlike(call, await request);
   }
 
+  $async.Future<$0.CommentList> findComments_Pre($grpc.ServiceCall call,
+      $async.Future<$0.FindMomentCommentsRequest> request) async {
+    return findComments(call, await request);
+  }
+
   $async.Future<$0.Moment> create(
       $grpc.ServiceCall call, $0.CreateMomentRequest request);
   $async.Future<$1.Empty> delete(
@@ -573,6 +598,8 @@ abstract class MomentServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.StringValue request);
   $async.Future<$2.BoolValue> unlike(
       $grpc.ServiceCall call, $2.StringValue request);
+  $async.Future<$0.CommentList> findComments(
+      $grpc.ServiceCall call, $0.FindMomentCommentsRequest request);
 }
 
 class CommentServiceClient extends $grpc.Client {

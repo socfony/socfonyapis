@@ -2388,6 +2388,119 @@ class CommentMomentRequest extends $pb.GeneratedMessage {
   void clearContent() => clearField(2);
 }
 
+class FindMomentCommentsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'FindMomentCommentsRequest',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'odroe.socfony'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'momentId')
+    ..a<$core.int>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'limit',
+        $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'offset',
+        $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  FindMomentCommentsRequest._() : super();
+  factory FindMomentCommentsRequest({
+    $core.String? momentId,
+    $core.int? limit,
+    $core.int? offset,
+  }) {
+    final _result = create();
+    if (momentId != null) {
+      _result.momentId = momentId;
+    }
+    if (limit != null) {
+      _result.limit = limit;
+    }
+    if (offset != null) {
+      _result.offset = offset;
+    }
+    return _result;
+  }
+  factory FindMomentCommentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FindMomentCommentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FindMomentCommentsRequest clone() =>
+      FindMomentCommentsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FindMomentCommentsRequest copyWith(
+          void Function(FindMomentCommentsRequest) updates) =>
+      super.copyWith((message) => updates(message as FindMomentCommentsRequest))
+          as FindMomentCommentsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static FindMomentCommentsRequest create() => FindMomentCommentsRequest._();
+  FindMomentCommentsRequest createEmptyInstance() => create();
+  static $pb.PbList<FindMomentCommentsRequest> createRepeated() =>
+      $pb.PbList<FindMomentCommentsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static FindMomentCommentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindMomentCommentsRequest>(create);
+  static FindMomentCommentsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get momentId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set momentId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMomentId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMomentId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get limit => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set limit($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasLimit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLimit() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get offset => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set offset($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasOffset() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOffset() => clearField(3);
+}
+
 class Comment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
@@ -2518,4 +2631,63 @@ class Comment extends $pb.GeneratedMessage {
   void clearCreatedAt() => clearField(4);
   @$pb.TagNumber(4)
   $3.Timestamp ensureCreatedAt() => $_ensure(3);
+}
+
+class CommentList extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CommentList',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'odroe.socfony'),
+      createEmptyInstance: create)
+    ..pc<Comment>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'comments',
+        $pb.PbFieldType.PM,
+        subBuilder: Comment.create)
+    ..hasRequiredFields = false;
+
+  CommentList._() : super();
+  factory CommentList({
+    $core.Iterable<Comment>? comments,
+  }) {
+    final _result = create();
+    if (comments != null) {
+      _result.comments.addAll(comments);
+    }
+    return _result;
+  }
+  factory CommentList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommentList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CommentList clone() => CommentList()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CommentList copyWith(void Function(CommentList) updates) =>
+      super.copyWith((message) => updates(message as CommentList))
+          as CommentList; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CommentList create() => CommentList._();
+  CommentList createEmptyInstance() => create();
+  static $pb.PbList<CommentList> createRepeated() => $pb.PbList<CommentList>();
+  @$core.pragma('dart2js:noInline')
+  static CommentList getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommentList>(create);
+  static CommentList? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Comment> get comments => $_getList(0);
 }
