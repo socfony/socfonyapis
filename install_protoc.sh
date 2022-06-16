@@ -4,7 +4,7 @@
 # license that can be found in the LICENSE file.
 
 # Version
-version=3.19.3
+version=3.21.1
 
 # Define the platform
 platform=$(uname -s)
