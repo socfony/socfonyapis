@@ -88,6 +88,7 @@ protoc_params=(
 echo "Generating Dart files..."
 protoc ${protoc_params[*]}
 
+
 # If $cache_dir/protoc/bin in $PATH, remove it.
 if echo $PATH | grep -q "$cache_dir/protoc/bin"; then
     export PATH=$(echo $PATH | sed -e "s|$cache_dir/protoc/bin:||g")

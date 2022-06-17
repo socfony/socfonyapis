@@ -4,7 +4,7 @@
 # license that can be found in the LICENSE file.
 
 # Version
-version=3.21.1
+version=21.1
 
 # Define the platform
 platform=$(uname -s)
@@ -75,13 +75,13 @@ if [ -f $output_dir/$output_file ]; then
 fi
 
 # Download the protoc
-curl -L $url -o $output_dir/$output_file.zip
+curl -L $url -o $output_dir/$output_file
 
 # Unzip the protoc
-unzip $output_dir/$output_file.zip -d $output_dir
+unzip $output_dir/$output_file -d $output_dir
 
 # Remove the zip file
-rm $output_dir/$output_file.zip
+rm $output_dir/$output_file
 
 # Change the permission
 chmod +x $output_dir/bin/$output_file
